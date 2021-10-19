@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:mustard">
+
+    <a-camera wasd-controls-enabled="false" position="0 8 20"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets>
+        
+        <a-asset-item id="train-obj" src="./models/obj/Train In The Dessert/tinker.obj"></a-asset-item>
+        <a-asset-item id="train-mtl" src="./models/obj/Train In The Dessert/obj.mtl"></a-asset-item>
+        
+        <a-asset-item id="rail-obj" src="./models/obj/Train In The Dessert/tinker.obj"></a-asset-item>
+        <a-asset-item id="rail-mtl" src="./models/obj/Train In The Dessert/obj.mtl"></a-asset-item>
+
+        <a-asset-item id="train-gltf" src="./models/gltf/Train In The Dessert.glb"></a-asset-item>
+
+    </a-assets>
+    
+    <!--------------------------------------OBJ Models----------------------------------------------------------->   
+  
+    <a-entity obj-model="obj: #train-obj; mtl: #train-mtl" position="5 0 0" rotation="-90 -40 0" scale="0.1 0.1 0.1"></a-entity>
+    <a-entity obj-model="obj: #rail-obj; mtl: #rail-mtl" position="-10 0 -10" rotation="-90 45 0" scale="0.1 0.1 0.1"></a-entity>
+
+    
+    <!-------------------------------------Circular Plane----------------------------------------------->
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+      color="mustard">
+    </a-circle>
+
+    </a-entity>
+    
+  </a-scene>
+</body>
+
+</html>
